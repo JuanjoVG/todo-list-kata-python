@@ -12,3 +12,6 @@ class Item(object):
 
     def check(self):
         self.checked = True
+
+    def uncheck(self):
+        self.checked = False

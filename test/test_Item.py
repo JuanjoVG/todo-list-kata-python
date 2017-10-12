@@ -21,3 +21,10 @@ class ItemShould(unittest.TestCase):
     def test_item_is_unchecked_when_create(self):
         item = Item("test")
         self.assertEqual(item.is_checked(), False)
+
+    def test_item_is_unchecked_when_uncheck(self):
+        item = Item("test")
+        item.check()
+        self.assertEqual(item.is_checked(), True)
+        item.uncheck()
+        self.assertEqual(item.is_checked(), False)
